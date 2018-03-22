@@ -26,10 +26,10 @@ Running this in Python3
 import pyrebase
 
 config = {
-  "apiKey": "AIzaSyCpAaeOr0LqZCkeU5ZzN9xC7SeLzJRVY-M",
-  "authDomain": "raspberryexperiment.firebaseapp.com",
-  "databaseURL": "https://raspberryexperiment.firebaseio.com",
-  "storageBucket": "raspberryexperiment.appspot.com"
+  "apiKey": "SUPER KEY", ERROR!! replace this to ypur apiKey
+  "authDomain": "project.firebaseapp.com",
+  "databaseURL": "https://project.firebaseio.com",
+  "storageBucket": "project.appspot.com"
 }
 
 firebase = pyrebase.initialize_app(config)
