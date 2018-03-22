@@ -1,6 +1,21 @@
 # RaspPyrebase
 Running Pyrebase on Django with Raseberry Pi 3 - Raspbian
 
+- Create an Firebase project
+
+- Use realtime database, change database -> rules to :
+
+```
+{
+    "rules": {
+    ".read": "true",
+    ".write": "true"
+  }
+}
+
+```
+
+
 Starting SSH service on Raspbian/Raspberry Pi
 https://goo.gl/voyZ4D
 
