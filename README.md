@@ -6,14 +6,13 @@ Running Pyrebase on Django with Raseberry Pi 3 - Raspbian and PYTHON3
 
 - Use realtime database, change database -> rules to :
 
-```
+```json
 {
     "rules": {
     ".read": "true",
     ".write": "true"
   }
 }
-
 ```
 
 
@@ -22,7 +21,7 @@ https://goo.gl/voyZ4D
 
 # Testing
 Running this in Python3
-```
+```python
 import pyrebase
 
 config = {
