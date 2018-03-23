@@ -9,8 +9,8 @@ Running Pyrebase on Django with Raseberry Pi 3 - Raspbian and PYTHON3
 ```json
 {
     "rules": {
-    ".read": "true",
-    ".write": "true"
+        ".read": "true",
+        ".write": "true"
   }
 }
 ```
