@@ -66,7 +66,6 @@ my_stream.close()
 
 
 ## Configuring GPIO
-Try this.
 ``` python
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
@@ -79,7 +78,7 @@ GPIO.output(5,GPIO.LOW)
 ```
 
 ## Combining GPIO and Firebase:
-Just replace the `stream_handler`
+Just replace the `stream_handler` above.
 ```
 def stream_handler(message):
     if message["data"]==True and message['path']=='/GPIO_5':
