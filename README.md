@@ -1,19 +1,12 @@
 # RaspPyrebase
-Running Pyrebase on Django with Raseberry Pi 3 - Raspbian and PYTHON3
+Running Pyrebase on Raseberry Pi 3 (with Raspbian and PYTHON3)
 
-
-## Install Pyrebase
-a Python wrapper for the Firebase API.
-Install *https://github.com/thisbejim/Pyrebase*
-```
-$ pip install pyrebase
-```
 
 ## Create a Firebase Realtime Database
 Firebase privides realtime database that we can use it to sync data on all of our divices and web.
 
 - Create, choose *realtime database* at https://firebase.google.com/
-- Change `database -> rules` to public, if not, you need to Login to access Firebase later.
+- Under `database -> rules` tab, set to public for this practice. 
 ```json
 {
     "rules": {
@@ -22,13 +15,24 @@ Firebase privides realtime database that we can use it to sync data on all of ou
   }
 }
 ```
+Firebase's Databases can be inport/export as JSON format, 
 
+I've wrote a JSON mapping to Raspberry's GPIO: https://github.com/Wesely/RaspPyrebase/blob/master/res/firebase_structure.json
 
-# Starting SSH service on Raspbian/Raspberry Pi
-https://goo.gl/voyZ4D
+import this JSON as your database structure.
 
-# Testing
-Running this in Python3
+# Running on RaspBerry
+## Install Pyrebase
+a Python wrapper for the Firebase API.
+Install *https://github.com/thisbejim/Pyrebase*
+```
+$ pip install pyrebase
+```
+
+- Access Raspberry via ssh? check this: https://goo.gl/voyZ4D
+
+## Testing
+Run Python3 on Raspberry
 ```python
 import pyrebase
 
@@ -60,7 +64,7 @@ my_stream.close()
 ```
 
 
-## Raspberry Pi 3 LED Control
+## Configuring GPIO
 Try this.
 ``` python
 import RPi.GPIO as GPIO
