@@ -53,6 +53,7 @@ my_stream.close()
 
 
 ## Raspberry Pi 3 LED Control
+Try this.
 ``` python
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
@@ -60,5 +61,18 @@ GPIO.setmode(GPIO.BOARD)
 # ^^^^ Error !! GPIO.OUTPUT seems an old syntax
 GPIO.setup(5,GPIO.OUT) # using OUT is correct
 GPIO.output(5,GPIO.HIGH)
+time.sleep(2000)
 GPIO.output(5,GPIO.LOW)
+```
+
+## Combining GPIO and Firebase:
+Just replace the `stream_handler`
+```
+def stream_handler(message):
+    if message["data"]==True and message['path']=='/GPIO_5':
+        print ('GPIO_5 is True!!')
+        GPIO.output(5,GPIO.HIGH)
+    else:
+        print ('=口="')
+        GPIO.output(5,GPIO.LOW)
 ```
