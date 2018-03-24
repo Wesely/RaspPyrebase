@@ -50,3 +50,15 @@ def stream_handler(message):
 my_stream = db.child("GPIO").stream(stream_handler)
 my_stream.close()
 ```
+
+
+## Raspberry Pi 3 LED Control
+``` python
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+# GPIO.setup(5,GPIO.OUTPUT) 
+# ^^^^ Error !! GPIO.OUTPUT seems an old syntax
+GPIO.setup(5,GPIO.OUT) # using OUT is correct
+GPIO.output(5,GPIO.HIGH)
+GPIO.output(5,GPIO.LOW)
+```
