@@ -21,7 +21,7 @@ I've wrote a JSON mapping to Raspberry's GPIO: https://github.com/Wesely/RaspPyr
 
 import this JSON as your database structure.
 
-# Running on RaspBerry
+# Access Firebase on RaspBerry
 ## Install Pyrebase
 a Python wrapper for the Firebase API.
 Install *https://github.com/thisbejim/Pyrebase*
@@ -32,7 +32,8 @@ $ pip install pyrebase
 - Access Raspberry via ssh? check this: https://goo.gl/voyZ4D
 
 ## Testing
-Run Python3 on Raspberry
+- Find your Firebase API key at : https://console.firebase.google.com/project/PROJECT_NAME/settings/general/
+- Run Python3 on Raspberry
 ```python
 import pyrebase
 
