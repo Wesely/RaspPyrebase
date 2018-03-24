@@ -2,10 +2,18 @@
 Running Pyrebase on Django with Raseberry Pi 3 - Raspbian and PYTHON3
 
 
-- Create an Firebase project
+## Install Pyrebase
+a Python wrapper for the Firebase API.
+Install *https://github.com/thisbejim/Pyrebase*
+```
+$ pip install pyrebase
+```
 
-- Use realtime database, change database -> rules to :
+## Create a Firebase Realtime Database
+Firebase privides realtime database that we can use it to sync data on all of our divices and web.
 
+- Create, choose *realtime database* at https://firebase.google.com/
+- Change `database -> rules` to public, if not, you need to Login to access Firebase later.
 ```json
 {
     "rules": {
@@ -16,7 +24,7 @@ Running Pyrebase on Django with Raseberry Pi 3 - Raspbian and PYTHON3
 ```
 
 
-Starting SSH service on Raspbian/Raspberry Pi
+# Starting SSH service on Raspbian/Raspberry Pi
 https://goo.gl/voyZ4D
 
 # Testing
